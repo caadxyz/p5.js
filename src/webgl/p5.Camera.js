@@ -2066,7 +2066,6 @@ p5.Camera = class Camera {
   /**
  * Orbits the camera about center point. For use with orbitControl().
  * @method _orbit
- * @private
  * @param {Number} dTheta change in spherical coordinate theta
  * @param {Number} dPhi change in spherical coordinate phi
  * @param {Number} dRadius change in radius
@@ -2136,7 +2135,6 @@ p5.Camera = class Camera {
  * Orbits the camera about center point. For use with orbitControl().
  * Unlike _orbit(), the direction of rotation always matches the direction of pointer movement.
  * @method _orbitFree
- * @private
  * @param {Number} dx the x component of the rotation vector.
  * @param {Number} dy the y component of the rotation vector.
  * @param {Number} dRadius change in radius

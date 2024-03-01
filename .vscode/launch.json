@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:9001/docs/reference/#/p5/draw",
+            "request": "launch",
+            "url": "http://127.0.0.1:9001/docs/reference/#/p5/draw"
+        }
+    ]
+}

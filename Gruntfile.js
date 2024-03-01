@@ -163,14 +163,22 @@ module.exports = grunt => {
           urls: ['http://localhost:9001/test/test-reference.html']
         }
       },
-      test: {
+      test_all: {
         options: {
           urls: [
             'http://localhost:9001/test/test.html',
             'http://localhost:9001/test/test-minified.html'
           ]
         }
+      },
+      test: {
+        options: {
+          urls: [
+            'http://localhost:9001/test/test.html'
+          ]
+        }
       }
+
     },
 
     nyc: {
@@ -323,6 +331,7 @@ module.exports = grunt => {
     'eslint-samples:source'
   ]);
   grunt.registerTask('lint-fix', ['eslint:fix']);
+
   grunt.registerTask('test', [
     'build',
     'connect:server',
@@ -330,6 +339,12 @@ module.exports = grunt => {
     'mochaTest',
     'nyc:report'
   ]);
+
+  grunt.registerTask('test_chrome', [
+    'connect:server',
+    'mochaChrome:test'
+  ]);
+
   grunt.registerTask('test:nobuild', [
     'eslint:test',
     'connect:server',
@@ -337,6 +352,8 @@ module.exports = grunt => {
     'mochaTest',
     'nyc:report'
   ]);
+
+
   grunt.registerTask('yui', ['yuidoc:prod', 'clean:reference', 'minjson']);
   grunt.registerTask('yui:test', ['yui', 'connect:yui', 'mochaChrome:yui']);
   grunt.registerTask('yui:dev', ['yui', 'build', 'connect:yui', 'watch:yui']);

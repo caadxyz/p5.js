@@ -62,6 +62,7 @@
     "i18next-browser-languagedetector": "^4.0.1",
     "libtess": "^1.2.2",
     "lint-staged": "^4.3.0",
+    "lodash": "^4.17.21",
     "marked": "^4.0.10",
     "mocha": "^10.2.0",
     "np": "^8.0.4",
@@ -76,7 +77,7 @@
     "whatwg-fetch": "^2.0.4"
   },
   "license": "LGPL-2.1",
-  "main": "./lib/p5.min.js",
+  "main": "./lib/p5.js",
   "files": [
     "license.txt",
     "lib/p5.min.js",
